@@ -2,7 +2,7 @@
         <head>
         <title>cmsimde_site</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -142,24 +142,117 @@ img.add_border {
           </div>
 
         </header>
-    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <a href='Codespaces.html'>Next</a> >> Codespaces<br /><h1>cmsimde</h1>
-<p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
-<p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>
-<p><span style="background-color: #ccffcc;">Edit</span> - Edit page - 先選擇要編輯的單一頁面後, 再點選 Edit, 即可進入單一頁面的編輯模式.</p>
-<p><span style="background-color: #ccffcc;">Config</span> - Configure Site - 編輯頁面標題與管理者密碼.</p>
-<p><span style="background-color: #ccffcc;">Search</span> - 動態頁面內容的關鍵字搜尋.</p>
-<p><span style="background-color: #ccffcc;">IUpload</span> - Image file Upload - 圖檔的上傳功能, 可以上傳 jpg, png 與 gif 檔案, 其中若在手機上傳圖檔, 系統會自動將圖片檔案縮小為 800x800 大小.</p>
-<p><span style="background-color: #ccffcc;">IList</span> - Image file List - 列出可以直接在頁面編輯模式中引用的圖片檔案.</p>
-<p><span style="background-color: #ccffcc;">FUpload</span> - File Upload - 一般檔案的上傳功能, 目前可以上傳的檔案副檔名包括 'jpg', 'png', 'gif', '7z', 'pdf', 'zip', 'ttt', 'stl', 'txt', 'html', 'mp4' 等, 使用者可以自行修改.</p>
-<p><span style="background-color: #ccffcc;">FList</span> - File List - 列出可以直接在頁面編輯模式中引用的上傳檔案.</p>
-<p><span style="background-color: #ccffcc;">Logout</span> - 登出頁面編輯模式.</p>
-<p><span style="background-color: #ccffcc;">Convert</span> - 將動態網站中位於 config/content.htm 檔案, 透過分頁設定轉為 content 目錄中的靜態網頁.</p>
-<p><span style="background-color: #ccffcc;">acp</span> - git add, git commit 與 git push, 通常只有在 localhost 或自架主機上利用網頁表單協助將倉儲改版內容推向 Github 倉儲.</p>
-<p><span style="background-color: #ccffcc;">SStatic</span> - Start Static Site - 利用 Python 啟動網站伺服功能, 可以讓使用者檢查轉檔後的靜態網站內容.</p>
-<p><span style="background-color: #ccffcc;">RStatic</span> - Replit Static Site URL - 僅用於 Replit 模式, 當使用者按下 SStatic 後, 可以按下 RStatic 進入當下尚未推向 Github Pages 的靜態網站.</p>
-<p><span style="background-color: #ccffcc;">80</span> - 由 init.py 中 static_port 所決定的連結字串, 一般不使用 80, 只有在 Replit 中為了與動態網站共用 port, 才特別設為 80.</p>
-<p></p>
-<br />About << <a href='About.html'>Previous</a> <a href='Codespaces.html'>Next</a> >> Codespaces</div>
+    <div id="tipue_search_content">課程期中整理 << <a href='課程期中整理.html'>Previous</a> <a href='Python 程式系統.html'>Next</a> >> Python 程式系統<br /><h1>網頁式內容管理</h1>
+<p>Q1:如何建立 Github 上的網站?Q2:如何管理內容?Q3: 如何建立章節式網站?Q4:能放入什麼多媒體內容?Q5:靜態圖文?Q6:動態圖文?Q7:線上遊戲?Q8:3D 零組件展示?Q9:如何建立網頁系統中的網誌?Q10:如何建立網頁系統中的簡報?</p>
+<p><strong><span style="background-color: #00ccff;">A1:</span>1. 建立 GitHub 儲存庫</strong></p>
+<ol>
+<li>登入 GitHub。</li>
+<li>點擊右上角的 “+” 按鈕，選擇 “New repository”。</li>
+<li>儲存庫名稱輸入 <code>&lt;username&gt;.github.io</code>（將 <code>&lt;username&gt;</code> 替換為你的 GitHub 使用者名稱）。</li>
+<li>設置為 public，然後點擊 “Create repository”。</li>
+</ol>
+<p><strong>2. 添加網站檔案</strong></p>
+<ol>
+<li>在本地電腦上克隆剛剛建立的儲存庫。</li>
+<li>進入儲存庫目錄。</li>
+<li>建立一個 <code>index.html</code> 文件，並添加你的網站內容，如簡單的 HTML 頁面。</li>
+<li>提交並推送更改到 GitHub。</li>
+</ol>
+<p><strong>3. 啟用 GitHub Pages</strong></p>
+<ol>
+<li>進入你的 GitHub 儲存庫頁面。</li>
+<li>點擊儲存庫設定（Settings）。</li>
+<li>滾動到 “GitHub Pages” 部分。</li>
+<li>在 “Source” 下拉選單中選擇 <code>main</code> 分支，然後點擊 “Save”</li>
+<li>通過 <code>https://&lt;username&gt;.github.io</code> 進入網站。</li>
+</ol>
+<p><strong><span style="background-color: #00ccff;">A2:</span>1. 直接編輯文件</strong></p>
+<ul>
+<li>在 GitHub 網站上編輯：進入儲存庫，選擇文件，點擊鉛筆圖標編輯，提交更改。</li>
+<li>在本地編輯：在本地編輯文件，使用 Git 提交並推送更改。</li>
+</ul>
+<p><strong>2. 使用 Jekyll</strong></p>
+<ul>
+<li>安裝 Jekyll，在本地建立新網站，添加內容到 <code>_posts</code> 目錄，配置 <code>_config.yml</code>，推送到 GitHub 儲存庫。</li>
+</ul>
+<p><strong>3. 使用 GitHub Actions</strong></p>
+<ul>
+<li>在儲存庫中建立 <code>.github/workflows</code> 目錄，添加工作流文件（如 <code>deploy.yml</code>），設置自動化流程。</li>
+</ul>
+<p><strong>4. 使用靜態網站 CMS</strong></p>
+<ul>
+<li>Netlify CMS：設置 Netlify CMS，集成到 GitHub 儲存庫，通過其界面管理和編輯內容。</li>
+</ul>
+<p><span style="background-color: #00ccff;"><strong>A3:</strong></span><span>可以使用靜態網站生成器，如Replit、Codespaces或Gitpods等。首先，需要選擇一個適合你需求的生成器，然後在本地開發環境中創建你的網站再使用生成器提供的模板和功能來創建不同的章節和內容頁面，組織你的網站內容。完成編輯後，使用生成器將網站生成為靜態文件，然後將這些文件推送到GitHub存儲庫中。最後，你的章節式網站將通過GitHub Pages或其他靜態網站托管服務進行部署，讓其他人可以訪問和瀏覽你的網站。</span></p>
+<p><strong><span style="background-color: #00ccff;">A4:</span>1. 圖片:</strong>將圖片文件上傳到你的儲存庫中，然後在需要的地方使用 <code>&lt;img&gt;</code> 標籤嵌入圖片。</p>
+<p><strong>2. 影片:</strong>將影片文件上傳到你的儲存庫中，然後使用 <code>&lt;video&gt;</code> 標籤或嵌入視頻平台（如 YouTube）的視頻鏈接。</p>
+<p><strong>3. 音頻:</strong>將音頻文件上傳到你的儲存庫中，然後使用 <code>&lt;audio&gt;</code> 標籤播放音樂或音訊。</p>
+<p><strong>4. 文件下載:</strong>將需要提供的文件上傳到你的儲存庫中，然後添加下載鏈接到網站的相應位置。</p>
+<p><strong>5. 互動地圖:</strong>使用地圖服務提供的嵌入代碼（如 Google 地圖的嵌入代碼）在網站中嵌入互動地圖。</p>
+<p><strong>6. 網站嵌入:</strong>嵌入其他網站或工具，例如在網站中嵌入 Twitter 貼文或 GitHub Gists。</p>
+<p><strong><span style="background-color: #00ccff;">A5:</span>1. 文字</strong></p>
+<ul>
+<li>在 markdown 文件中直接添加文字內容，使用標題（<code>#</code>）、段落、列表等 Markdown 語法進行排版。</li>
+<li>使用 HTML 標籤（如 <code>&lt;h1&gt;</code>、<code>&lt;p&gt;</code>、<code>&lt;ul&gt;</code> 等）來定製更複雜的文本排版。</li>
+</ul>
+<p><strong>2. 圖片</strong></p>
+<ul>
+<li>將圖片文件上傳到你的 GitHub 儲存庫中，然後在 markdown 文件中使用 Markdown 語法或 HTML 標籤添加圖片。</li>
+<li>例如，在 markdown 文件中使用 <code>![Alt text](path/to/image.jpg)</code> 或在 HTML 中使用 <code>&lt;img src="path/to/image.jpg" alt="Alt text"&gt;</code> 來添加圖片。</li>
+</ul>
+<p><strong><span style="background-color: #00ccff;">A6:</span>1. GIF 圖片</strong></p>
+<ul>
+<li>將 GIF 圖片文件上傳到你的 GitHub 儲存庫中，然後在 markdown 文件中使用 Markdown 語法或 HTML 標籤添加 GIF 圖片。</li>
+<li>例如，在 markdown 文件中使用 <code>![Alt text](path/to/image.gif)</code> 或在 HTML 中使用 <code>&lt;img src="path/to/image.gif" alt="Alt text"&gt;</code> 來添加 GIF 圖片。</li>
+</ul>
+<p><strong>2. 動態文本效果</strong></p>
+<ul>
+<li>使用 CSS 或 JavaScript 創建動態的文本效果，例如文字的漸變色、動態顯示、動畫效果等。</li>
+<li>你可以將這些效果添加到 HTML 或 CSS 文件中，然後將這些文件上傳到你的 GitHub 儲存庫中，並在你的網站中引入這些文件。</li>
+</ul>
+<p><strong>3. JavaScript 動畫</strong></p>
+<ul>
+<li>使用 JavaScript 創建動畫效果，例如滾動效果、彈出效果、視差滾動等。</li>
+<li>你可以將 JavaScript 代碼添加到 HTML 文件中，然後將文件上傳到你的 GitHub 儲存庫中，並在你的網站中引入這些文件。</li>
+</ul>
+<p><strong><span style="background-color: #00ccff;">A7:</span>嵌入 HTML5 遊戲</strong></p>
+<p>如果你有一個 HTML5 遊戲的代碼，你可以將其嵌入到你的網站中。通常，HTML5 遊戲的代碼會包含在一個 HTML 文件中，你可以將這個文件和相關的資源文件（如 JavaScript 和 CSS 文件）上傳到你的 GitHub 儲存庫中，然後在你的網站中引入這些文件。</p>
+<p><strong>嵌入其他網頁遊戲</strong></p>
+<p>如果你想嵌入其他網頁上的遊戲，你可以使用 <code>&lt;iframe&gt;</code> 標籤將遊戲頁面嵌入到你的網站中。只需將遊戲頁面的 URL 放入 <code>&lt;iframe&gt;</code> 標籤的 <code>src</code> 屬性中即可。</p>
+<p><strong><span style="background-color: #00ccff;">A8: </span></strong><span><strong>1.使用Javascript 3D庫:</strong>使用像Three.js這樣的JavaScript 3D庫，可以輕鬆在網站中展示3D零組件。你可以將3D模型導入到你的網站中，並使用Three.js等庫來渲染和顯示它們。這樣的庫通常提供了各種功能，如照明、動畫、交互等，以增強3D模型的表現力。</span></p>
+<p><span><strong>2.使用網頁GL視窗:</strong>利用WebGL技術，你可以在網頁中嵌入可交互的3D場景。這需要一些較高級的編程知識，但它可以讓你在網頁中直接渲染3D模型，使它們能夠與用戶互動。</span></p>
+<p><span><strong>3.嵌入式3D查看器:</strong>使用嵌入式3D查看器，如Sketchfab，可以將3D模型嵌入到你的網站中。Sketchfab提供了一個簡單的嵌入代碼，你可以將它添加到你的網站中，以便在線上展示和互動3D模型。</span></p>
+<p><strong><span style="background-color: #00ccff;">A9:</span>1. 選擇網誌平台或系統</strong></p>
+<ul>
+<li><strong>自建網誌</strong>：你可以使用 WordPress、Jekyll、Hugo 等網誌平台或靜態網站生成器自建網誌。</li>
+<li><strong>使用網誌平台</strong>：例如 Blogger、Medium、WordPress.com 等提供的網誌服務。</li>
+</ul>
+<p><strong>2. 設計和建立網誌</strong></p>
+<ul>
+<li>選擇一個適合的網誌佈局和風格。</li>
+<li>添加網誌所需的功能，如文章分類、標籤、評論系統等。</li>
+</ul>
+<p><strong>3. 撰寫和發佈文章</strong></p>
+<ul>
+<li>撰寫你的網誌文章，包括內容、圖片、視頻等。</li>
+<li>使用選定的網誌平台或系統發佈文章，並設置適當的分類和標籤。</li>
+</ul>
+<p><strong>4. 宣傳你的網誌</strong></p>
+<ul>
+<li>分享你的文章到社交媒體平台，增加曝光度。</li>
+<li>與其他網誌作者合作，互相宣傳。</li>
+</ul>
+<p><strong>5. 管理和更新</strong></p>
+<ul>
+<li>定期更新你的網誌，保持活躍和吸引力。</li>
+<li>回應讀者的評論，與他們建立互動。</li>
+</ul>
+<p><strong><span style="background-color: #00ccff;">A10:</span>1</strong>.<strong>選擇簡報工具</strong>：像是 PowerPoint、Google 幻燈片或 Keynote 這樣的工具都可以。</p>
+<p>2.<strong>設計簡報</strong>：挑選適合你主題的模板，並按照你的需求設計簡報的外觀。</p>
+<p>3.<strong>添加內容</strong>：插入你想要展示的文字、圖片、圖表等內容。</p>
+<p>4.<strong>設定簡報流程</strong>：按照順序組織你的內容，確保簡報的邏輯清晰。</p>
+<p>5.<strong>測試</strong>：在發布前確保簡報中沒有任何錯誤或格式問題。</p>
+<p></p><br />課程期中整理 << <a href='課程期中整理.html'>Previous</a> <a href='Python 程式系統.html'>Next</a> >> Python 程式系統</div>
 
     <!-- footer -->
       <div class="container">
