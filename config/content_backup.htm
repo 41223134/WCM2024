@@ -39,6 +39,7 @@
 <p dir="auto"></p>
 <p dir="auto">for IPv6 only Ubuntu:<br/><br/>.ssh 目錄中的 config, 將 SSH session 名稱設為 github.com:<br/><br/>Host github.com<br/>User git<br/>Hostname github.com<br/>ProxyCommand /usr/bin/ncat --proxy p4.cycu.org:3128 --proxy-type http %h %p<br/><br/>for Replit:<br/><br/>.ssh 目錄中的 config, 將 SSH session 名稱設為 github.com:<br/><br/>Host github.com<br/>User git<br/>Hostname github.co<br/>#since Replit works for IPv4, therefore no ProxyCommand setting needed<br/>#ProxyCommand /usr/bin/ncat --proxy p4.cycu.org:3128 --proxy-type http %h %p</p>
 <p></p>
+<h1>w3</h1>
 <h1>w6</h1>
 <p><strong>從與ChatGPT的對話認識Git</strong></p>
 <p><span style="background-color: #ccffff;"><strong>問題一:Git 的發展歷史</strong></span></p>
@@ -190,7 +191,122 @@ git config --global user.email "your.email@example.com"</pre>
 </div>
 </div>
 </div>
-<h1>Brython</h1>
+<h1>課程期中整理</h1>
+<h2>網頁式內容管理</h2>
+<p>Q1:如何建立 Github 上的網站?Q2:如何管理內容?Q3: 如何建立章節式網站?Q4:能放入什麼多媒體內容?Q5:靜態圖文?Q6:動態圖文?Q7:線上遊戲?Q8:3D 零組件展示?Q9:如何建立網頁系統中的網誌?Q10:如何建立網頁系統中的簡報?</p>
+<p><strong>A1:1. 建立 GitHub 儲存庫</strong></p>
+<ol>
+<li>登入 GitHub。</li>
+<li>點擊右上角的 “+” 按鈕，選擇 “New repository”。</li>
+<li>儲存庫名稱輸入 <code>&lt;username&gt;.github.io</code>（將 <code>&lt;username&gt;</code> 替換為你的 GitHub 使用者名稱）。</li>
+<li>設置為 public，然後點擊 “Create repository”。</li>
+</ol>
+<p><strong>2. 添加網站檔案</strong></p>
+<ol>
+<li>在本地電腦上克隆剛剛建立的儲存庫。</li>
+<li>進入儲存庫目錄。</li>
+<li>建立一個 <code>index.html</code> 文件，並添加你的網站內容，如簡單的 HTML 頁面。</li>
+<li>提交並推送更改到 GitHub。</li>
+</ol>
+<p><strong>3. 啟用 GitHub Pages</strong></p>
+<ol>
+<li>進入你的 GitHub 儲存庫頁面。</li>
+<li>點擊儲存庫設定（Settings）。</li>
+<li>滾動到 “GitHub Pages” 部分。</li>
+<li>在 “Source” 下拉選單中選擇 <code>main</code> 分支，然後點擊 “Save”</li>
+<li>通過 <code>https://&lt;username&gt;.github.io</code> 進入網站。</li>
+</ol>
+<p><strong>A2:1. 直接編輯文件</strong></p>
+<ul>
+<li>在 GitHub 網站上編輯：進入儲存庫，選擇文件，點擊鉛筆圖標編輯，提交更改。</li>
+<li>在本地編輯：在本地編輯文件，使用 Git 提交並推送更改。</li>
+</ul>
+<p><strong>2. 使用 Jekyll</strong></p>
+<ul>
+<li>安裝 Jekyll，在本地建立新網站，添加內容到 <code>_posts</code> 目錄，配置 <code>_config.yml</code>，推送到 GitHub 儲存庫。</li>
+</ul>
+<p><strong>3. 使用 GitHub Actions</strong></p>
+<ul>
+<li>在儲存庫中建立 <code>.github/workflows</code> 目錄，添加工作流文件（如 <code>deploy.yml</code>），設置自動化流程。</li>
+</ul>
+<p><strong>4. 使用靜態網站 CMS</strong></p>
+<ul>
+<li>Netlify CMS：設置 Netlify CMS，集成到 GitHub 儲存庫，通過其界面管理和編輯內容。</li>
+</ul>
+<p><strong>A3:</strong><span>可以使用靜態網站生成器，如Replit、Codespaces或Gitpods等。首先，需要選擇一個適合你需求的生成器，然後在本地開發環境中創建你的網站再使用生成器提供的模板和功能來創建不同的章節和內容頁面，組織你的網站內容。完成編輯後，使用生成器將網站生成為靜態文件，然後將這些文件推送到GitHub存儲庫中。最後，你的章節式網站將通過GitHub Pages或其他靜態網站托管服務進行部署，讓其他人可以訪問和瀏覽你的網站。</span></p>
+<p><strong>A4:1. 圖片:</strong>將圖片文件上傳到你的儲存庫中，然後在需要的地方使用 <code>&lt;img&gt;</code> 標籤嵌入圖片。</p>
+<p><strong>2. 影片:</strong>將影片文件上傳到你的儲存庫中，然後使用 <code>&lt;video&gt;</code> 標籤或嵌入視頻平台（如 YouTube）的視頻鏈接。</p>
+<p><strong>3. 音頻:</strong>將音頻文件上傳到你的儲存庫中，然後使用 <code>&lt;audio&gt;</code> 標籤播放音樂或音訊。</p>
+<p><strong>4. 文件下載:</strong>將需要提供的文件上傳到你的儲存庫中，然後添加下載鏈接到網站的相應位置。</p>
+<p><strong>5. 互動地圖:</strong>使用地圖服務提供的嵌入代碼（如 Google 地圖的嵌入代碼）在網站中嵌入互動地圖。</p>
+<p><strong>6. 網站嵌入:</strong>嵌入其他網站或工具，例如在網站中嵌入 Twitter 貼文或 GitHub Gists。</p>
+<p><strong>A5:1. 文字</strong></p>
+<ul>
+<li>在 markdown 文件中直接添加文字內容，使用標題（<code>#</code>）、段落、列表等 Markdown 語法進行排版。</li>
+<li>使用 HTML 標籤（如 <code>&lt;h1&gt;</code>、<code>&lt;p&gt;</code>、<code>&lt;ul&gt;</code> 等）來定製更複雜的文本排版。</li>
+</ul>
+<p><strong>2. 圖片</strong></p>
+<ul>
+<li>將圖片文件上傳到你的 GitHub 儲存庫中，然後在 markdown 文件中使用 Markdown 語法或 HTML 標籤添加圖片。</li>
+<li>例如，在 markdown 文件中使用 <code>![Alt text](path/to/image.jpg)</code> 或在 HTML 中使用 <code>&lt;img src="path/to/image.jpg" alt="Alt text"&gt;</code> 來添加圖片。</li>
+</ul>
+<p><strong>A6:1. GIF 圖片</strong></p>
+<ul>
+<li>將 GIF 圖片文件上傳到你的 GitHub 儲存庫中，然後在 markdown 文件中使用 Markdown 語法或 HTML 標籤添加 GIF 圖片。</li>
+<li>例如，在 markdown 文件中使用 <code>![Alt text](path/to/image.gif)</code> 或在 HTML 中使用 <code>&lt;img src="path/to/image.gif" alt="Alt text"&gt;</code> 來添加 GIF 圖片。</li>
+</ul>
+<p><strong>2. 動態文本效果</strong></p>
+<ul>
+<li>使用 CSS 或 JavaScript 創建動態的文本效果，例如文字的漸變色、動態顯示、動畫效果等。</li>
+<li>你可以將這些效果添加到 HTML 或 CSS 文件中，然後將這些文件上傳到你的 GitHub 儲存庫中，並在你的網站中引入這些文件。</li>
+</ul>
+<p><strong>3. JavaScript 動畫</strong></p>
+<ul>
+<li>使用 JavaScript 創建動畫效果，例如滾動效果、彈出效果、視差滾動等。</li>
+<li>你可以將 JavaScript 代碼添加到 HTML 文件中，然後將文件上傳到你的 GitHub 儲存庫中，並在你的網站中引入這些文件。</li>
+</ul>
+<p><strong>A7:嵌入 HTML5 遊戲</strong></p>
+<p>如果你有一個 HTML5 遊戲的代碼，你可以將其嵌入到你的網站中。通常，HTML5 遊戲的代碼會包含在一個 HTML 文件中，你可以將這個文件和相關的資源文件（如 JavaScript 和 CSS 文件）上傳到你的 GitHub 儲存庫中，然後在你的網站中引入這些文件。</p>
+<p><strong>嵌入其他網頁遊戲</strong></p>
+<p>如果你想嵌入其他網頁上的遊戲，你可以使用 <code>&lt;iframe&gt;</code> 標籤將遊戲頁面嵌入到你的網站中。只需將遊戲頁面的 URL 放入 <code>&lt;iframe&gt;</code> 標籤的 <code>src</code> 屬性中即可。</p>
+<p><strong>A8:</strong><span><strong>1.使用Javascript 3D庫:</strong>使用像Three.js這樣的JavaScript 3D庫，可以輕鬆在網站中展示3D零組件。你可以將3D模型導入到你的網站中，並使用Three.js等庫來渲染和顯示它們。這樣的庫通常提供了各種功能，如照明、動畫、交互等，以增強3D模型的表現力。</span></p>
+<p><span><strong>2.使用網頁GL視窗:</strong>利用WebGL技術，你可以在網頁中嵌入可交互的3D場景。這需要一些較高級的編程知識，但它可以讓你在網頁中直接渲染3D模型，使它們能夠與用戶互動。</span></p>
+<p><span><strong>3.嵌入式3D查看器:</strong>使用嵌入式3D查看器，如Sketchfab，可以將3D模型嵌入到你的網站中。Sketchfab提供了一個簡單的嵌入代碼，你可以將它添加到你的網站中，以便在線上展示和互動3D模型。</span></p>
+<p><strong>A9:1. 選擇網誌平台或系統</strong></p>
+<ul>
+<li><strong>自建網誌</strong>：你可以使用 WordPress、Jekyll、Hugo 等網誌平台或靜態網站生成器自建網誌。</li>
+<li><strong>使用網誌平台</strong>：例如 Blogger、Medium、WordPress.com 等提供的網誌服務。</li>
+</ul>
+<p><strong>2. 設計和建立網誌</strong></p>
+<ul>
+<li>選擇一個適合的網誌佈局和風格。</li>
+<li>添加網誌所需的功能，如文章分類、標籤、評論系統等。</li>
+</ul>
+<p><strong>3. 撰寫和發佈文章</strong></p>
+<ul>
+<li>撰寫你的網誌文章，包括內容、圖片、視頻等。</li>
+<li>使用選定的網誌平台或系統發佈文章，並設置適當的分類和標籤。</li>
+</ul>
+<p><strong>4. 宣傳你的網誌</strong></p>
+<ul>
+<li>分享你的文章到社交媒體平台，增加曝光度。</li>
+<li>與其他網誌作者合作，互相宣傳。</li>
+</ul>
+<p><strong>5. 管理和更新</strong></p>
+<ul>
+<li>定期更新你的網誌，保持活躍和吸引力。</li>
+<li>回應讀者的評論，與他們建立互動。</li>
+</ul>
+<p><strong>A10:1</strong>.<strong>選擇簡報工具</strong>：像是 PowerPoint、Google 幻燈片或 Keynote 這樣的工具都可以。</p>
+<p>2.<strong>設計簡報</strong>：挑選適合你主題的模板，並按照你的需求設計簡報的外觀。</p>
+<p>3.<strong>添加內容</strong>：插入你想要展示的文字、圖片、圖表等內容。</p>
+<p>4.<strong>設定簡報流程</strong>：按照順序組織你的內容，確保簡報的邏輯清晰。</p>
+<p>5.<strong>測試</strong>：在發布前確保簡報中沒有任何錯誤或格式問題。</p>
+<p></p><h2>Python 程式系統</h2>
+<p>Q1如何利用電腦輔助設計室的舊 Python 建立新的可攜環境? Q2:在網頁中置入 Python 語法的程式加上對 Javascript 與超文件語法的了解後, 能夠應用在那些領域? (精密)機械設計流程? 設計運算? 特定系統模擬?</p><h2>網頁上的 IDE</h2>
+<p>Q1:IDE 是甚麼? Q2:可以將 Replit、Codespaces 與 Gitpod 當成 IDE 用來開發各種程式嗎? Q3:與近端操作系統上的開發有何不同? Q4:多人協同? Q5:這樣安全嗎?</p>
+<p>學習議題: 學會使用網頁上的各種 IDE 之後, 有沒有甚麼感想或心得?</p><h2>AI 工具</h2>
+<p>Q1:ChatGPT 與 Gemini Pro 都可以直接利用 Gmail 帳號登入, 初級應用目前都可免費使用, 這兩個 AI 工具可以協助我們解決甚麼問題? Q2:為什麼有人驚這些工具為天人? 有人卻覺得還好而已, 並無法從中挖出甚麼資料? Q3:AI 工具曾經協助我們解決甚麼問題?</p><h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
